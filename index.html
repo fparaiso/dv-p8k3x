@@ -2739,7 +2739,7 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 .step-card:nth-child(4) .step-time{color:#7EB8F7!important;background:rgba(126,184,247,.07)!important;border-color:transparent!important;}
 
 @media(max-width:768px){
-  .steps-grid{grid-template-columns:1fr!important;max-width:88%!important;gap:14px!important;}
+  .steps-grid{grid-template-columns:1fr!important;max-width:94%!important;gap:14px!important;}
   .step-num{width:60px!important;height:60px!important;font-size:24px!important;}
   .step-card{padding:20px 18px 18px!important;border-radius:12px!important;}
   .step-card h4{font-size:15px!important;}
@@ -2767,6 +2767,7 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   #resultados .section-header h2{font-size:clamp(26px,6.5vw,34px)!important;}
   #como-funciona .section-header h2{font-size:clamp(26px,6.5vw,34px)!important;}
   #educacao .section-header h2{font-size:clamp(24px,6.5vw,32px)!important;}
+  #educacao .edu-text{padding:0 12px!important;}
   #educacao .edu-text p{font-size:15px!important;}
   .testimonials{max-width:100%!important;}
 }
@@ -3186,6 +3187,7 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
         <div class="calculator-action-row">
           <button class="calculator-btn-disabled" id="calcContinueDate" disabled>Continuar</button>
         </div>
+        <button class="calculator-reset-btn" onclick="showStage('calcStage1')">Voltar</button>
       </div>
 
       <div class="calculator-stage" id="calcStage3">
@@ -3206,6 +3208,7 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
         <div class="calculator-action-row">
           <button class="calculator-btn-disabled" id="calcCalculateBtn" disabled>Calcular agora</button>
         </div>
+        <button class="calculator-reset-btn" onclick="showStage('calcStage2')">Voltar</button>
       </div>
 
       <div class="calculator-stage" id="calcResult">
