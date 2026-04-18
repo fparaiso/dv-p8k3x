@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="color-scheme" content="dark"/>
+<meta name="theme-color" content="#060D16"/>
 
 <!-- ========== SEO: Title + Description ========== -->
 <title>Revisão de Plano de Saúde por CNPJ — Reajuste Abusivo | DOLF Advogados</title>
@@ -257,15 +259,10 @@ p{color:rgba(232,237,246,.68);font-size:17px}
 .chart-fill{height:100%;max-width:100%;border-radius:8px;display:flex;align-items:center;padding:0 16px;font-size:14px;font-weight:800;color:#fff;transition:width 1.5s ease}
 .chart-fill.green{background:linear-gradient(90deg,rgba(34,199,168,.55),rgba(109,197,174,.55))}
 .chart-fill.red{background:linear-gradient(90deg,rgba(201,122,115,.55),rgba(248,113,113,.55))}
-.chart-diff{text-align:center;margin-top:24px;padding:16px;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);border-radius:10px;font-size:16px;font-weight:700;color:#f87171}
 
 /* ===== EDUCATION ===== */
 .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 .edu-text p{margin-bottom:16px;font-size:16px;line-height:1.8}
-.edu-highlight{background:linear-gradient(135deg,rgba(76,127,203,.08),rgba(134,168,217,.06));border:1px solid rgba(217,175,94,.16);color:#fff;border-radius:var(--radius-lg);padding:28px;position:relative;overflow:hidden}
-.edu-highlight::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;background:rgba(217,175,94,.06);border-radius:50%}
-.edu-highlight p{color:rgba(244,247,252,.92);font-size:15px;line-height:1.8;position:relative;z-index:1}
-.edu-highlight .source{display:block;margin-top:12px;font-size:13px;color:rgba(232,237,246,.58);font-style:italic}
 .rights-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:40px;max-width:760px;margin-left:auto;margin-right:auto}
 .right-card{background:var(--card-bg);border-radius:var(--radius);padding:24px;text-align:center;box-shadow:var(--shadow-sm);border:1px solid var(--card-border);transition:all .3s}
 .right-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:rgba(134,168,217,.16)}
@@ -359,13 +356,22 @@ p{color:rgba(232,237,246,.68);font-size:17px}
 .faq-list{max-width:760px;margin:0 auto}
 .faq-item{background:var(--card-bg);border:1px solid var(--card-border);border-radius:var(--radius);margin-bottom:10px;overflow:hidden;transition:all .3s}
 .faq-item:hover{border-color:rgba(134,168,217,.18)}
-.faq-item.open{border-color:rgba(217,175,94,.32);box-shadow:0 2px 12px rgba(217,175,94,.06)}
+.faq-item[open]{border-color:rgba(217,175,94,.32);box-shadow:0 2px 12px rgba(217,175,94,.06)}
 .faq-question{width:100%;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;font-size:15px;font-weight:400;color:#fff;text-align:left;font-family:'Raleway',sans-serif;gap:16px}
 .faq-arrow{width:24px;height:24px;border-radius:50%;background:rgba(232,237,246,.05);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .3s;font-size:12px;color:rgba(232,237,246,.50)}
-.faq-item.open .faq-arrow{background:var(--gold);color:#0A1426;transform:rotate(180deg)}
+.faq-item[open] .faq-arrow{background:var(--gold);color:#0A1426;transform:rotate(180deg)}
 .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease}
-.faq-item.open .faq-answer{max-height:500px}
-.faq-answer-inner{padding:0 24px 20px;font-size:15px;color:rgba(232,237,246,.68);line-height:1.8}
+.faq-item[open] .faq-answer{max-height:500px}
+.faq-answer-inner{padding:0 24px 20px;font-size:15px;color:rgba(232,237,246,.68);line-height:1.8;text-align:justify}
+
+/* === FAQ · suporte <details>/<summary> nativo (Sub-A) === */
+/* Oculta o triangle nativo do <summary> em todos os browsers */
+.faq-question{list-style:none}
+.faq-question::-webkit-details-marker{display:none}
+.faq-question::marker{content:""}
+/* Mantém .faq-answer renderizado mesmo quando details está fechado,
+   para que a transição de max-height funcione normalmente */
+.faq-item > .faq-answer{display:block}
 
 /* ===== FINAL CTA ===== */
 .cta-final{background:linear-gradient(135deg,#060D16,#090F1A,#0C1420);color:#fff;padding:80px 0;text-align:center;position:relative;overflow:hidden;border-top:1px solid rgba(200,144,46,.10)}
@@ -641,7 +647,7 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   #problema .problem-card{padding:26px 22px}
   #problema .problem-card p{font-size:18px;line-height:1.65}
   .section-header{margin-bottom:34px}
-  .section-header h2{font-size:clamp(28px,8vw,40px)}
+  .section-header h2{font-size:clamp(28px,6vw,36px)}
   .lawyer-info h3{font-size:24px}
 }
 
@@ -1172,12 +1178,6 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 }
 
 
-@keyframes goldShimmer{
-  0%{filter:brightness(1)}
-  50%{filter:brightness(1.08)}
-  100%{filter:brightness(1)}
-}
-
 /* ===== ELEGANT GOLD REFINEMENTS ===== */
 .hero-tag{
   background:rgba(217,175,94,.08);
@@ -1227,14 +1227,8 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 .calculator-disclaimer{
   background:linear-gradient(135deg,rgba(255,255,255,.035),rgba(255,255,255,.018)) !important;
 }
-.edu-highlight,
 .calculator-result-card.green{
   background:linear-gradient(135deg,rgba(217,175,94,.10),rgba(14,33,42,.45)) !important;
-}
-.chart-diff{
-  background:rgba(217,175,94,.08) !important;
-  border-color:rgba(217,175,94,.16) !important;
-  color:#E7C886 !important;
 }
 .hero-badge svg,
 .steps-badge-inner,
@@ -1242,7 +1236,7 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 .quiz-success h3{
   color:#22C7A8 !important;
 }
-.faq-item.open .faq-arrow{
+.faq-item[open] .faq-arrow{
   background:#D9AF5E !important;
   color:#0A1426 !important;
 }
@@ -1603,7 +1597,7 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   }
 
   #quiz .calculator-subtitle {
-    font-size: 14px !important;
+    font-size: 15px !important;
     line-height: 1.5 !important;
     margin-bottom: 18px !important;
   }
@@ -1895,20 +1889,12 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 }
 
 /* FAQ arrow aberto */
-.faq-item.open .faq-arrow {
+.faq-item[open] .faq-arrow {
   background: #C8902E !important;
   color: #040A12 !important;
 }
 .faq-item:hover { border-color: rgba(200,144,46,.22) !important; }
-.faq-item.open  { border-color: rgba(200,144,46,.35) !important; box-shadow: 0 2px 12px rgba(200,144,46,.08) !important; }
-
-/* Chart diff e edu-highlight */
-.chart-diff {
-  background: rgba(200,144,46,.08) !important;
-  border-color: rgba(200,144,46,.16) !important;
-  color: #D4A040 !important;
-}
-.edu-highlight { border-color: rgba(200,144,46,.18) !important; }
+.faq-item[open]  { border-color: rgba(200,144,46,.35) !important; box-shadow: 0 2px 12px rgba(200,144,46,.08) !important; }
 
 /* Quiz progress e opção selecionada */
 .quiz-progress-fill,
@@ -2207,11 +2193,9 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 
 
 
-/* === CALCULATOR FONT SCALE-DOWN === */
-
 /* === RIGHTS-GRID TO QUIZ SPACING === */
 .rights-grid{margin-bottom:40px!important;}
-#quiz.section-blue{padding-top:60px!important;}
+#quiz.section-blue{padding-top:60px!important;padding-bottom:120px!important;}
 
 /* === RIGHT-CARD SMALLER === */
 .rights-grid{grid-template-columns:1fr!important;max-width:440px!important;margin-left:auto!important;margin-right:auto!important;margin-top:28px!important;}
@@ -2231,10 +2215,15 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 .calculator-grid{gap:7px!important;max-width:100%!important;margin-left:0!important;margin-right:0!important;grid-template-columns:repeat(2,1fr)!important;display:grid!important;}
 .calculator-option{font-size:9px!important;padding:8px 10px!important;border-radius:9px!important;}
 #quiz .calculator-grid{gap:7px!important;grid-template-columns:repeat(2,1fr)!important;}
-#quiz .calculator-option{font-size:13px!important;padding:12px 14px!important;border-radius:12px!important;font-weight:400!important;font-family:'Raleway',sans-serif!important;letter-spacing:.3px!important;}
+@media (min-width: 769px){
+  #quiz .calculator-option{font-size:13px!important;padding:12px 14px!important;border-radius:12px!important;font-weight:400!important;font-family:'Raleway',sans-serif!important;letter-spacing:.3px!important;}
+}
 .calculator-nav{margin-top:16px!important;gap:8px!important;max-width:100%!important;margin-left:0!important;margin-right:0!important;}
 .calculator-nav .btn{font-size:12px!important;padding:9px 18px!important;border-radius:9px!important;}
-#quiz .calculator-header h2{font-size:clamp(26px,4vw,38px)!important;letter-spacing:-.5px!important;margin-bottom:14px!important;white-space:nowrap!important;}
+#quiz .calculator-header h2{font-size:clamp(26px,4vw,38px)!important;letter-spacing:-.5px!important;margin-bottom:14px!important;}
+@media (min-width: 769px){
+  #quiz .calculator-header h2{white-space:nowrap!important;}
+}
 #quiz .calculator-title{font-size:clamp(24px,3.6vw,31px)!important;}
 .quiz-question{font-size:18px!important;margin-bottom:20px!important;}
 .quiz-step-label{font-size:11px!important;}
@@ -2275,19 +2264,17 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 #quiz .calculator-result-note{font-size:11px!important;}
 #quiz .calculator-disclaimer{margin:16px 0 16px!important;padding:16px 18px!important;border-radius:14px!important;font-size:11px!important;line-height:1.7!important;}
 #quiz .calculator-whatsapp-btn{min-height:44px!important;border-radius:12px!important;font-size:13px!important;font-weight:700!important;}
-#quiz .calculator-reset-btn{font-size:12px!important;margin-top:12px!important;}
+@media (min-width: 769px){
+  #quiz .calculator-reset-btn{font-size:12px!important;margin-top:12px!important;}
+}
 @media(max-width:768px){
-  #quiz .calculator-header h2{font-size:clamp(22px,7vw,30px)!important;white-space:normal!important;}
-  .calculator-shell{padding:18px 16px!important;border-radius:16px!important;max-width:95%!important;}
-  #quiz .calculator-title{font-size:clamp(18px,5vw,24px)!important;}
-  #quiz .calculator-option{font-size:10px!important;padding:8px 10px!important;border-radius:10px!important;}
   .quiz-question{font-size:16px!important;}
   .quiz-option{font-size:12px!important;padding:11px 14px!important;}
   .quiz-body{padding:24px 18px!important;}
   #quiz .calculator-result-value{font-size:clamp(22px,7vw,32px)!important;}
   #quiz .calculator-result-icon{width:44px!important;height:44px!important;font-size:22px!important;}
   .rights-grid{margin-bottom:40px!important;}
-  #quiz.section-blue{padding-top:40px!important;}
+  #quiz.section-blue{padding-top:40px!important;padding-bottom:80px!important;}
 }
 
 /* === HERO BADGES (subtle, centered, 3-col grid) === */
@@ -2317,10 +2304,6 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 }
 
 .nav{background:rgba(19,24,32,.96)!important;backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(4,10,20,.48);padding:10px 0;border-bottom:1px solid rgba(200,144,46,.08)!important;}
-
-/* === 2 STAT CARDS CENTERED === */
-
-/* === PROBLEM BULLETS (elegant style) === */
 
 /* === CHART TITLE REDESIGN (elegant comparison) === */
 .chart-title-new{text-align:center;margin-bottom:0;display:flex;flex-direction:row;align-items:baseline;justify-content:center;gap:8px;}
@@ -2360,12 +2343,6 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 .section-header h2,
 .section-header p,
 .section-header span{hyphens:none;-webkit-hyphens:none;-ms-hyphens:none;word-break:normal;overflow-wrap:normal;}
-
-/* === PROBLEM PANEL (elegant 2x2 grid) === */
-
-/* === EDUCATION SECTION — COMPACT & CENTERED === */
-
-/* === LAWYER SOCIAL LINKS === */
 
 /* === WHATSAPP BUTTON — GLASS GREEN === */
 .btn-whatsapp{
@@ -2689,8 +2666,12 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 .dolf-footer{background:rgba(6,10,20,.6)!important;border-top:0.8px solid rgba(255,255,255,.05)!important;padding:40px 0!important;text-align:center!important;position:relative!important;z-index:1!important;}
 .dolf-footer-inner{max-width:720px;margin:0 auto;padding:0 24px;}
 .dolf-footer-logo{display:block!important;width:100px!important;height:auto!important;opacity:.92;margin:0 auto 24px!important;max-height:82px!important;}
-.dolf-footer-copy{font-size:14px;color:rgba(255,255,255,.3);margin-bottom:16px;}
-.dolf-footer-disclaimer{font-size:12px;color:rgba(255,255,255,.3);max-width:672px;margin:0 auto;line-height:1.65;text-align:justify;}
+.dolf-footer-copy{font-size:14px;color:rgba(255,255,255,.55);margin-bottom:16px;}
+.dolf-footer-disclaimer{font-size:12px;color:rgba(255,255,255,.50);max-width:672px;margin:0 auto;line-height:1.65;text-align:justify;}
+@media(max-width:768px){
+  .dolf-footer-copy{font-size:13px!important;}
+  .dolf-footer-disclaimer{font-size:11px!important;}
+}
 
 /* === LAWYER SOCIAL LINKS === */
 .lawyer-team-text{font-size:14px;color:rgba(255,255,255,.5);margin-bottom:16px;font-family:'Raleway',sans-serif;}
@@ -2714,8 +2695,6 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 #educacao .section-header h2{max-width:640px!important;margin-left:auto!important;margin-right:auto!important;font-size:clamp(28px,4.5vw,40px)!important;line-height:1.25!important;}
 #educacao .edu-grid{grid-template-columns:1fr!important;max-width:640px!important;margin:0 auto!important;}
 #educacao .edu-text p{font-size:16px!important;line-height:1.75!important;text-align:justify!important;color:rgba(255,255,255,.58)!important;margin-bottom:14px!important;}
-
-/* === TESTIMONIALS — COMPACT & CENTERED === */
 
 /* === STEPS REDESIGN (ramosrenovation.com style + glass cards) === */
 .steps-grid{max-width:720px!important;margin:0 auto!important;gap:16px!important;grid-template-columns:repeat(2,1fr)!important;}
@@ -2764,9 +2743,9 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   #sobre .section-header .tag,
   .cta-final .section-header .tag,
   #como-funciona .section-header .tag{font-size:14px!important;padding:6px 12px!important;}
-  #resultados .section-header h2{font-size:clamp(26px,6.5vw,34px)!important;}
-  #como-funciona .section-header h2{font-size:clamp(26px,6.5vw,34px)!important;}
-  #educacao .section-header h2{font-size:clamp(24px,6.5vw,32px)!important;}
+  #resultados .section-header h2{font-size:clamp(28px,6vw,36px)!important;}
+  #como-funciona .section-header h2{font-size:clamp(28px,6vw,36px)!important;}
+  #educacao .section-header h2{font-size:clamp(28px,6vw,36px)!important;}
   #educacao .edu-text{padding:0 12px!important;}
   #educacao .edu-text p{font-size:15px!important;}
   .testimonials{max-width:100%!important;}
@@ -2967,6 +2946,18 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
     font-size: 12px !important;
     padding: 7px 14px !important;
     letter-spacing: 0.3px !important;
+  }
+}
+
+/* === C3 · prefers-reduced-motion · WCAG 2.1 SC 2.3.3 (AAA) + SC 2.2.2 (A) === */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
@@ -3353,38 +3344,38 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
 <h2>Perguntas frequentes</h2>
 </div>
 <div class="faq-list fade-up">
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)">Vou perder meu plano se entrar na Justiça?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+<details class="faq-item">
+<summary class="faq-question">Vou perder meu plano se entrar na Justiça?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></summary>
 <div class="faq-answer"><div class="faq-answer-inner">Não. A ação judicial visa justamente proteger seu plano. A Justiça pode determinar que a operadora mantenha o contrato e aplique os reajustes corretos. Em muitos casos, o juiz concede uma liminar logo no início do processo que impede qualquer cancelamento.</div></div>
-</div>
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)">Quanto custa contratar o escritório?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Quanto custa contratar o escritório?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></summary>
 <div class="faq-answer"><div class="faq-answer-inner">A consulta inicial e a análise do seu contrato são 100% gratuitas. Para os casos em que há ação judicial, trabalhamos com honorários condicionados ao êxito — ou seja, você só paga se obtiver resultado positivo. Não há nenhum custo antecipado.</div></div>
-</div>
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)">Quanto tempo dura o processo?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Quanto tempo dura o processo?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></summary>
 <div class="faq-answer"><div class="faq-answer-inner">O processo completo costuma durar entre 12 e 24 meses, dependendo da complexidade do caso e da carga do Judiciário. Em muitos casos, o juiz pode conceder uma tutela antecipada ou liminar — decisão provisória que adianta parte dos efeitos do processo — mas sua obtenção depende da análise individual do caso. Durante todo o processo você é mantido informado sobre cada etapa.</div></div>
-</div>
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)">Meu plano se enquadra?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Meu plano se enquadra?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></summary>
 <div class="faq-answer"><div class="faq-answer-inner">Planos como Unimed, Bradesco Saúde, SulAmérica, Amil, Hapvida, NotreDame Intermédica, Porto Saúde, Allianz, Omint, Cassi, Geap e outras operadoras regulamentadas pela ANS podem se enquadrar. Objetivamente: se o plano foi contratado via CNPJ, para você e/ou sua família, sem funcionários vinculados, e houve reajustes acima da ANS, ele pode se enquadrar.</div></div>
-</div>
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)">Preciso de algum documento específico?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Preciso de algum documento específico?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></summary>
 <div class="faq-answer"><div class="faq-answer-inner">Para a análise inicial, precisamos principalmente do último boleto com as informações dos beneficiários. Se tiver o contrato também, ainda melhor. Não se preocupe se não tiver tudo — nosso time ajuda você a reunir o necessário.</div></div>
-</div>
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)">A operadora pode me retaliar por entrar na Justiça?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+</details>
+<details class="faq-item">
+<summary class="faq-question">A operadora pode me retaliar por entrar na Justiça?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></summary>
 <div class="faq-answer"><div class="faq-answer-inner">Não. É ilegal que a operadora cancele, reduza cobertura ou de qualquer forma prejudique um beneficiário por ter ingressado com ação judicial. Se isso ocorrer, a Justiça pode determinar indenização adicional por danos morais.</div></div>
-</div>
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)">Já tive meu plano cancelado. Ainda posso agir?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Já tive meu plano cancelado. Ainda posso agir?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></summary>
 <div class="faq-answer"><div class="faq-answer-inner">Sim. Se o cancelamento foi unilateral e irregular, é possível buscar a reativação do plano e a indenização pelos danos causados. Além disso, mesmo após o cancelamento, você pode ter direito à restituição dos reajustes pagos indevidamente.</div></div>
-</div>
-<div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)">Como funciona o atendimento online?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></button>
+</details>
+<details class="faq-item">
+<summary class="faq-question">Como funciona o atendimento online?<span class="faq-arrow"><svg viewBox="0 0 16 16" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></span></summary>
 <div class="faq-answer"><div class="faq-answer-inner">Todo o processo é conduzido digitalmente: análise do contrato, assinatura de procuração, protocolo da ação e acompanhamento. Você não precisa ir presencialmente ao escritório em nenhum momento. Atendemos clientes de todo o Brasil.</div></div>
-</div>
+</details>
 </div>
 </div>
 </section>
@@ -3474,12 +3465,19 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-function toggleFaq(btn) {
-  const item = btn.parentElement;
-  const wasOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!wasOpen) item.classList.add('open');
-}
+/* FAQ — Sub-A · <details>/<summary> nativos
+   Mantém o comportamento "só um aberto por vez" via listener 'toggle'.
+   Funciona sem JavaScript também: details abre/fecha nativamente; sem JS,
+   os FAQs podem ficar múltiplos abertos — comportamento aceitável como fallback. */
+document.querySelectorAll('.faq-list details.faq-item').forEach(d => {
+  d.addEventListener('toggle', () => {
+    if (d.open) {
+      document.querySelectorAll('.faq-list details.faq-item').forEach(other => {
+        if (other !== d) other.open = false;
+      });
+    }
+  });
+});
 
 const chartObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
