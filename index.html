@@ -267,7 +267,7 @@ p{color:rgba(232,237,246,.68);font-size:17px}
 .right-card{background:var(--card-bg);border-radius:var(--radius);padding:24px;text-align:center;box-shadow:var(--shadow-sm);border:1px solid var(--card-border);transition:all .3s}
 .right-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:rgba(134,168,217,.16)}
 .right-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:24px}
-.right-card h4{font-family:'Raleway',sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:6px}
+.right-card h3, .right-card h4{font-family:'Raleway',sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:6px}
 .right-card p{font-size:14px;color:rgba(232,237,246,.68)}
 
 /* ===== CHECKLIST ===== */
@@ -302,7 +302,7 @@ p{color:rgba(232,237,246,.68);font-size:17px}
 .step-card{background:var(--card-bg);border-radius:var(--radius-lg);padding:32px 24px;text-align:center;position:relative;z-index:1;box-shadow:var(--shadow-sm);border:1px solid var(--card-border)}
 .step-num{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#C46B3D,#DDA15E);color:#fff;font-size:18px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;box-shadow:0 4px 12px rgba(196,107,61,.22)}
 .step-time{display:inline-block;background:rgba(217,175,94,.10);color:var(--gold);font-size:12px;font-weight:700;padding:4px 12px;border-radius:12px;margin-bottom:12px}
-.step-card h4{font-family:'Raleway',sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:8px}
+.step-card h3, .step-card h4{font-family:'Raleway',sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:8px}
 .step-card p{font-size:14px;color:rgba(232,237,246,.68);line-height:1.6}
 .steps-badge{text-align:center;margin-top:40px}
 .steps-badge-inner{display:inline-flex;align-items:center;gap:10px;background:rgba(226,185,107,.08);border:1px solid rgba(226,185,107,.25);padding:14px 28px;border-radius:var(--radius);font-size:15px;font-weight:700;color:var(--gold)}
@@ -405,18 +405,6 @@ html.js .fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s eas
 html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
-/* ===== RESPONSIVE ===== */
-@media(max-width:1024px){
-  .hero-grid,.problem-grid,.edu-grid,.lawyer-grid{grid-template-columns:1fr;gap:32px}
-  .steps-grid{grid-template-columns:repeat(2,1fr)}
-  .steps-grid::before{display:none}
-  .testimonials{grid-template-columns:1fr}
-  .stats-row{grid-template-columns:repeat(3,1fr);gap:12px}
-  .hero-right{align-items:stretch}
-  .hero-stats{max-width:none}
-  .hero-card{max-width:none}
-  .lawyer-photo{max-width:260px;margin:0 auto}
-}
 @media(max-width:768px){
   .hero{padding:120px 0 60px}
   .section-white,.section-gray,.section-blue,.section-dark{padding:60px 0}
@@ -530,7 +518,7 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   padding:30px 28px;
   border-radius:24px;
 }
-.right-card h4{
+.right-card h3, .right-card h4{
   font-size:18px;
   margin-bottom:12px;
 }
@@ -574,20 +562,6 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   font-weight:600;
   font-size:15px;
 }
-@media (max-width: 980px){
-  .hero-ctas{
-    flex-wrap:wrap;
-  }
-  .hero-ctas .btn{
-    width:100%;
-  }
-  .hero-stats{
-    grid-template-columns:1fr;
-  }
-  .rights-grid{
-    grid-template-columns:1fr;
-  }
-}
 
 
 
@@ -620,14 +594,6 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 .lawyer-photo{padding:0;background:none;border:1px solid var(--card-border)}
 .lawyer-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .lawyer-photo::after{display:none}
-@media(max-width:980px){
-  .hero-ctas{flex-wrap:wrap}
-  .hero-ctas .btn{width:100%}
-  .hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-  .hero-stat{min-height:132px;padding:18px 12px;border-radius:18px}
-  .hero-stat-num{font-size:clamp(28px,8vw,42px);margin-bottom:10px}
-  .hero-stat-label{font-size:13px;line-height:1.25}
-}
 @media(max-width:768px){
   .container{padding:0 20px}
   .hero{padding:108px 0 54px;min-height:auto}
@@ -728,11 +694,6 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   min-height:58px;
   border-radius:10px;
 }
-@media(max-width:980px){
-  .hero-question{
-    max-width:100%;
-  }
-}
 @media(max-width:768px){
   .hero-line{white-space:normal}
   .hero-answer{
@@ -776,11 +737,6 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 .problem-entenda{display:inline;color:#fff;margin-top:0;margin-left:6px}
 .lawyer-photo{aspect-ratio:16/10 !important;max-width:100% !important;overflow:hidden}
 .lawyer-photo img{width:100%;height:100%;object-fit:cover;object-position:center center}
-@media(min-width:769px){
-  .hero-line-main{display:block;white-space:normal}
-  .hero-line-secondary{display:block;margin-top:6px}
-  .hero-answer{display:block;margin-top:18px;font-size:clamp(40px,5.8vw,62px);line-height:1.04}
-}
 @media(max-width:768px){
   .hero{padding:104px 0 50px}
   .hero-line-main{font-size:clamp(28px,9.4vw,44px);line-height:1.08;font-weight:500}
@@ -826,7 +782,7 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 #quiz .calculator-bar{height:14px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin-bottom:42px;}
 #quiz .calculator-bar-fill{height:100%;background:linear-gradient(90deg,rgba(255,255,255,.22),rgba(255,255,255,.42));border-radius:999px;box-shadow:none;}
 #quiz .calculator-title{font-size:clamp(34px,4vw,58px);line-height:1.06;color:#fff;font-family:'Raleway',sans-serif;font-weight:800;margin-bottom:10px;}
-#quiz .calculator-subtitle{font-size:clamp(18px,2vw,22px);line-height:1.55;color:rgba(232,237,246,.48);margin-bottom:34px;}
+#quiz .calculator-subtitle{font-size:clamp(18px,2vw,22px);line-height:1.55;color:rgba(232,237,246,.55);margin-bottom:34px;}
 #quiz .calculator-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 18px;}
 #quiz .calculator-option{width:100%;padding:24px 26px;border-radius:20px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.04);color:#fff;font-size:18px;font-weight:700;text-align:left;cursor:pointer;transition:all .22s ease;}
 #quiz .calculator-option:hover{transform:translateY(-2px);background:rgba(255,255,255,.06);border-color:rgba(126,183,255,.24);}
@@ -857,16 +813,11 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 #quiz .calculator-result-value.blue{color:rgba(255,255,255,.55);}
 #quiz .calculator-result-value.green{color:#14d3a3;}
 #quiz .calculator-result-note{font-size:15px;line-height:1.55;color:rgba(232,237,246,.40);}
-#quiz .calculator-disclaimer{margin:26px 0 24px;padding:26px 28px;border-radius:22px;background:rgba(255,255,255,.03);border:1px solid rgba(126,183,255,.12);color:rgba(232,237,246,.48);font-size:14px;line-height:1.9;}
+#quiz .calculator-disclaimer{margin:26px 0 24px;padding:26px 28px;border-radius:22px;background:rgba(255,255,255,.03);border:1px solid rgba(126,183,255,.12);color:rgba(232,237,246,.55);font-size:14px;line-height:1.9;}
 #quiz .calculator-disclaimer strong{color:rgba(232,237,246,.76);}
 #quiz .calculator-whatsapp-btn{width:100%;display:flex;align-items:center;justify-content:center;text-align:center;min-height:88px;border-radius:22px;background:linear-gradient(135deg,#bc5b24,#d46f34);color:#fff;font-size:20px;font-weight:800;box-shadow:0 16px 38px rgba(212,111,52,.22);}
 #quiz .calculator-reset-btn{margin:18px auto 0;display:block;background:none;border:none;color:rgba(232,237,246,.42);text-decoration:underline;font-size:16px;cursor:pointer;}
 #quiz .calculator-reset-btn:hover{color:rgba(232,237,246,.72);}
-@media(max-width:980px){
-  #quiz .calculator-shell{padding:32px 24px;}
-  #quiz .calculator-grid,
-  #quiz .calculator-form-grid{grid-template-columns:1fr;}
-}
 @media(max-width:768px){
   #quiz{padding-top:20px;}
   #quiz .calculator-header h2{font-size:clamp(30px,10vw,50px);line-height:1.02;}
@@ -1116,24 +1067,6 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   color:rgba(232,237,246,.82);
   transform:none;
 }
-@media(max-width:980px){
-  .calculator-shell{
-    padding:30px 24px;
-    border-radius:24px;
-  }
-  .calculator-grid,
-  .calculator-form-grid,
-  .calculator-result-grid{
-    grid-template-columns:1fr;
-  }
-  .calculator-mini-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-  .calculator-option{
-    font-size:18px;
-    padding:20px 22px;
-  }
-}
 @media(max-width:768px){
   .calculator-success-icon{width:86px;height:86px;font-size:44px;margin-bottom:22px;}
   .calculator-header h2{
@@ -1284,11 +1217,6 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   color: rgba(255,255,255,.55) !important;
   font-weight: 500 !important;
   letter-spacing: 0.2px;
-}
-
-
-/* ===== HEADLINE MOBILE OPTIMIZATION ===== */
-@media (max-width: 768px){
 }
 
 
@@ -1954,7 +1882,7 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   .right-card {
     padding: 16px 12px !important;
   }
-  .right-card h4 {
+  .right-card h3, .right-card h4 {
     font-size: 14px !important;
   }
   .right-card p {
@@ -2049,91 +1977,6 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   gap: 40px !important;
 }
 
-/* ===== MOBILE PROPORÇÕES FINAIS — espelho do print de referência ===== */
-@media (max-width: 480px) {
-  /* container mais apertado em telas pequenas */
-  .container {
-    padding: 0 18px !important;
-  }
-
-  /* nav compacto */
-  .nav {
-    padding: 8px 0 !important;
-  }
-  .nav-logo img {
-    height: 30px !important;
-  }
-
-  /* hero: espaço vertical menor, igual ao print */
-  .hero {
-    padding: 76px 0 24px !important;
-  }
-
-  .hero-tag {
-    padding: 7px 12px !important;
-    font-size: 14px !important;
-    margin-bottom: 12px !important;
-    border-radius: 20px !important;
-  }
-
-  .hero h1 {
-    font-size: 26px !important;
-    line-height: 1.1 !important;
-  }
-
-  .hero-answer {
-    font-size: 26px !important;
-  }
-
-  .hero-sub {
-    font-size: 14px !important;
-    margin-bottom: 16px !important;
-  }
-
-  /* badges checkmark (Sem custo / 100% online / 24h) */
-  .hero-badges {
-    gap: 8px !important;
-    margin-bottom: 12px !important;
-    flex-wrap: wrap !important;
-  }
-  .hero-badge {
-    font-size: 11px !important;
-    gap: 5px !important;
-  }
-  .hero-badge svg {
-    width: 14px !important;
-    height: 14px !important;
-  }
-
-  /* stats 2×2 */
-  .hero-stats {
-    gap: 7px !important;
-  }
-  .hero-stat {
-    padding: 10px 8px !important;
-    min-height: 90px !important;
-    border-radius: 14px !important;
-  }
-  .hero-stat-num {
-    font-size: 22px !important;
-  }
-  .hero-stat-label {
-    font-size: 10px !important;
-  }
-
-  /* card de contexto (Plano pelo CNPJ...) */
-  .hero-card {
-    padding: 18px 16px !important;
-    border-radius: 14px !important;
-  }
-  .hero-card h3 {
-    font-size: 15px !important;
-  }
-  .hero-card p {
-    font-size: 13px !important;
-  }
-}
-
 /* Botões hero — tamanho */
 .hero-ctas .btn,
 .hero-ctas .btn-lg {
@@ -2200,7 +2043,7 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 /* === RIGHT-CARD SMALLER === */
 .rights-grid{grid-template-columns:1fr!important;max-width:440px!important;margin-left:auto!important;margin-right:auto!important;margin-top:28px!important;}
 .right-card{padding:24px 28px!important;border-radius:16px!important;}
-.right-card h4{font-size:16px!important;margin-bottom:5px!important;}
+.right-card h3, .right-card h4{font-size:16px!important;margin-bottom:5px!important;}
 .right-card p{font-size:14px!important;line-height:1.5!important;}
 .right-icon{width:44px!important;height:44px!important;border-radius:12px!important;font-size:21px!important;margin-bottom:12px!important;}
 
@@ -2215,15 +2058,9 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 .calculator-grid{gap:7px!important;max-width:100%!important;margin-left:0!important;margin-right:0!important;grid-template-columns:repeat(2,1fr)!important;display:grid!important;}
 .calculator-option{font-size:9px!important;padding:8px 10px!important;border-radius:9px!important;}
 #quiz .calculator-grid{gap:7px!important;grid-template-columns:repeat(2,1fr)!important;}
-@media (min-width: 769px){
-  #quiz .calculator-option{font-size:13px!important;padding:12px 14px!important;border-radius:12px!important;font-weight:400!important;font-family:'Raleway',sans-serif!important;letter-spacing:.3px!important;}
-}
 .calculator-nav{margin-top:16px!important;gap:8px!important;max-width:100%!important;margin-left:0!important;margin-right:0!important;}
 .calculator-nav .btn{font-size:12px!important;padding:9px 18px!important;border-radius:9px!important;}
 #quiz .calculator-header h2{font-size:clamp(26px,4vw,38px)!important;letter-spacing:-.5px!important;margin-bottom:14px!important;}
-@media (min-width: 769px){
-  #quiz .calculator-header h2{white-space:nowrap!important;}
-}
 #quiz .calculator-title{font-size:clamp(24px,3.6vw,31px)!important;}
 .quiz-question{font-size:18px!important;margin-bottom:20px!important;}
 .quiz-step-label{font-size:11px!important;}
@@ -2264,9 +2101,6 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 #quiz .calculator-result-note{font-size:11px!important;}
 #quiz .calculator-disclaimer{margin:16px 0 16px!important;padding:16px 18px!important;border-radius:14px!important;font-size:11px!important;line-height:1.7!important;}
 #quiz .calculator-whatsapp-btn{min-height:44px!important;border-radius:12px!important;font-size:13px!important;font-weight:700!important;}
-@media (min-width: 769px){
-  #quiz .calculator-reset-btn{font-size:12px!important;margin-top:12px!important;}
-}
 @media(max-width:768px){
   .quiz-question{font-size:16px!important;}
   .quiz-option{font-size:12px!important;padding:11px 14px!important;}
@@ -2286,21 +2120,11 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   .hero-badge{font-size:9px!important;padding:4px 9px!important;letter-spacing:.4px!important;text-transform:uppercase!important;}
   .hero-badge svg{width:10px!important;height:10px!important;}
 }
-@media(max-width:480px){
-  .hero-badges{gap:4px!important;}
-  .hero-badge{font-size:8px!important;padding:3px 7px!important;letter-spacing:.3px!important;text-transform:uppercase!important;}
-  .hero-badge svg{width:9px!important;height:9px!important;}
-}
 
 /* === CTA FINAL — fix de transbordamento no mobile: pílulas dimensionam por conteúdo === */
 @media(max-width:768px){
   .cta-final .hero-badges{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:4px!important;max-width:100%!important;}
   .cta-final .hero-badge{flex:0 0 auto!important;letter-spacing:.1px!important;}
-}
-@media(max-width:480px){
-  .cta-final .hero-badges{gap:3px!important;}
-  .cta-final .hero-badge{font-size:8px!important;padding:3px 7px!important;letter-spacing:0!important;}
-  .cta-final .hero-badge svg{width:8px!important;height:8px!important;}
 }
 
 .nav{background:rgba(19,24,32,.96)!important;backdrop-filter:blur(12px);box-shadow:0 2px 20px rgba(4,10,20,.48);padding:10px 0;border-bottom:1px solid rgba(200,144,46,.08)!important;}
@@ -2325,7 +2149,7 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 .chart-highlight-num{font-family:'Raleway',sans-serif;font-size:52px;font-weight:700;line-height:1;background:linear-gradient(135deg,#C0524F,#D4716E,#E09490);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;}
 .chart-highlight-text{font-size:20px;font-weight:400;letter-spacing:.2px;background:linear-gradient(135deg,#C0524F,#D4716E,#E09490);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;opacity:.65;max-width:420px;margin:0 auto;}
 .chart-highlight-ref{display:inline-block;font-size:11px;color:rgba(255,255,255,.42);letter-spacing:.8px;text-transform:uppercase;font-weight:600;}
-.chart-stj-quote{font-size:14px;color:rgba(232,237,246,.48);margin-top:48px;line-height:1.7;text-align:justify;max-width:520px;margin-left:auto;margin-right:auto;font-style:italic;padding:22px 26px;background:rgba(255,255,255,.025);border:0.8px solid rgba(255,255,255,.06);border-left:3px solid rgba(196,147,63,.35);border-radius:14px;backdrop-filter:blur(6px);}
+.chart-stj-quote{font-size:14px;color:rgba(232,237,246,.55);margin-top:48px;line-height:1.7;text-align:justify;max-width:520px;margin-left:auto;margin-right:auto;font-style:italic;padding:22px 26px;background:rgba(255,255,255,.025);border:0.8px solid rgba(255,255,255,.06);border-left:3px solid rgba(196,147,63,.35);border-radius:14px;backdrop-filter:blur(6px);}
 .chart-stj-source{display:block;margin-top:10px;font-size:11px;font-style:normal;font-weight:500;color:rgba(232,237,246,.30);letter-spacing:.3px;}
 @media(max-width:768px){
   .chart-highlight{margin-top:36px;}
@@ -2334,9 +2158,6 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   .chart-highlight-text{font-size:17px;}
   .chart-highlight-content{gap:8px;}
   .comparison-chart{padding:24px 18px!important;}
-}
-@media(max-width:480px){
-  .comparison-chart{padding:20px 14px!important;}
 }
 
 /* === HYPHENS FIX (escopado a .section-header — NUNCA global) === */
@@ -2703,7 +2524,7 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 .step-card:hover{transform:translateY(-2px)!important;border-color:rgba(255,255,255,.10)!important;background:rgba(255,255,255,.04)!important;}
 .step-num{width:68px!important;height:68px!important;border-radius:9999px!important;background:transparent!important;box-shadow:none!important;font-family:'Raleway',sans-serif!important;font-size:28px!important;font-weight:900!important;margin:0 auto 12px!important;display:flex!important;align-items:center!important;justify-content:center!important;line-height:1!important;padding:0 0 3px 0!important;text-indent:0!important;}
 .step-time{display:inline-block!important;font-size:12px!important;font-weight:700!important;padding:4px 12px!important;border-radius:9999px!important;margin-bottom:10px!important;letter-spacing:.3px!important;}
-.step-card h4{font-size:16px!important;font-weight:700!important;margin-bottom:6px!important;color:#fff!important;}
+.step-card h3, .step-card h4{font-size:16px!important;font-weight:700!important;margin-bottom:6px!important;color:#fff!important;}
 .step-card p{font-size:14px!important;color:rgba(255,255,255,.50)!important;line-height:1.6!important;}
 .step-action{font-size:11px!important;margin-top:8px!important;}
 
@@ -2721,7 +2542,7 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
   .steps-grid{grid-template-columns:1fr!important;max-width:94%!important;gap:14px!important;}
   .step-num{width:60px!important;height:60px!important;font-size:24px!important;}
   .step-card{padding:20px 18px 18px!important;border-radius:12px!important;}
-  .step-card h4{font-size:15px!important;}
+  .step-card h3, .step-card h4{font-size:15px!important;}
   .step-card p{font-size:13px!important;}
 }
 
@@ -2881,17 +2702,6 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
   }
 }
 
-/* Responsividade: mobile pequeno */
-@media (max-width:480px) {
-  #quiz .calculator-btn-disabled,
-  #quiz .calculator-whatsapp-btn {
-    padding: 14px 18px !important;
-    font-size: 14px !important;
-    min-height: 48px !important;
-    border-radius: 12px !important;
-  }
-}
-
 /* =================================================================
    FIX desktop >1024px — remove coluna direita vazia do hero-grid
    (era 1fr 1fr com HTML só na coluna esquerda, causando texto 
@@ -2949,6 +2759,273 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
   }
 }
 
+/* =================================================================
+   CONSOLIDADO B.2b.etapa4 — breakpoint (max-width: 1024px) · 1 bloco reposicionado
+   Origem: L409-L419 (bloco único "RESPONSIVE" · 1º breakpoint do arquivo).
+   Ordem interna: original (sem mudança — bloco único).
+   Auditoria de cascata (parser estrutural + simulador de cascata v3):
+     Δ observáveis em ≤1024 (regressões aceitas):
+       - .problem-grid gap: 28px → 32px  (L510 geral era posterior)
+       - .lawyer-grid  gap: 28px → 32px  (L672 geral era posterior)
+     Demais 10 declarações: sem Δ (códigos mortos ou dominados por !important posteriores).
+   ================================================================= */
+@media (max-width: 1024px) {
+  .hero-grid,.problem-grid,.edu-grid,.lawyer-grid{grid-template-columns:1fr;gap:32px}
+  .steps-grid{grid-template-columns:repeat(2,1fr)}
+  .steps-grid::before{display:none}
+  .testimonials{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:repeat(3,1fr);gap:12px}
+  .hero-right{align-items:stretch}
+  .hero-stats{max-width:none}
+  .hero-card{max-width:none}
+  .lawyer-photo{max-width:260px;margin:0 auto}
+}
+
+
+/* =================================================================
+   CONSOLIDADO B.2b.etapa3 — breakpoint (max-width: 980px) · 5 blocos fundidos
+   Origem (linhas pré-consolidação, arquivo pós-Etapa 2):
+     bloco 1: L577-L590   .hero-ctas / .hero-stats / .rights-grid
+     bloco 2: L623-L630   .hero-ctas (refinamento) / .hero-stats 3-col / .hero-stat*
+     bloco 3: L731-L735   .hero-question
+     bloco 4: L860-L864   #quiz .calculator-shell / grids
+     bloco 5: L1114-L1131 .calculator-shell / grids / .calculator-option
+   Ordem interna: D3 (aparição original).
+   Overlap crítico: .hero-ctas / .hero-stats (blocos 1 × 2) — bloco 2 vence após bloco 1.
+   ================================================================= */
+@media (max-width: 980px) {
+  /* ---- bloco 1 · .hero-ctas / .hero-stats / .rights-grid (ex-L577) ---- */
+  .hero-ctas{
+    flex-wrap:wrap;
+  }
+  .hero-ctas .btn{
+    width:100%;
+  }
+  .hero-stats{
+    grid-template-columns:1fr;
+  }
+  .rights-grid{
+    grid-template-columns:1fr;
+  }
+
+  /* ---- bloco 2 · refinamento .hero-ctas / .hero-stats 3-col (ex-L623) ---- */
+  .hero-ctas{flex-wrap:wrap}
+  .hero-ctas .btn{width:100%}
+  .hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+  .hero-stat{min-height:132px;padding:18px 12px;border-radius:18px}
+  .hero-stat-num{font-size:clamp(28px,8vw,42px);margin-bottom:10px}
+  .hero-stat-label{font-size:13px;line-height:1.25}
+
+  /* ---- bloco 3 · .hero-question (ex-L731) ---- */
+  .hero-question{
+    max-width:100%;
+  }
+
+  /* ---- bloco 4 · #quiz .calculator-shell / grids (ex-L860) ---- */
+  #quiz .calculator-shell{padding:32px 24px;}
+  #quiz .calculator-grid,
+  #quiz .calculator-form-grid{grid-template-columns:1fr;}
+
+  /* ---- bloco 5 · .calculator-shell / grids / .calculator-option (ex-L1114) ---- */
+  .calculator-shell{
+    padding:30px 24px;
+    border-radius:24px;
+  }
+  .calculator-grid,
+  .calculator-form-grid,
+  .calculator-result-grid{
+    grid-template-columns:1fr;
+  }
+  .calculator-mini-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .calculator-option{
+    font-size:18px;
+    padding:20px 22px;
+  }
+}
+
+
+/* =================================================================
+   CONSOLIDADO B.2b.etapa1 — breakpoint (max-width: 480px) · 5 blocos fundidos
+   Origem (linhas pré-consolidação):
+     bloco 1: L2048-L2130  "MOBILE PROPORÇÕES FINAIS" (container/nav/hero/badges/stats/card)
+     bloco 2: L2284-L2288  refinamento .hero-badges
+     bloco 3: L2295-L2299  refinamento .cta-final .hero-badges
+     bloco 4: L2333-L2335  .comparison-chart
+     bloco 5: L2880-L2888  #quiz .calculator-btn-disabled/.calculator-whatsapp-btn
+   Ordem interna: D3 (aparição original no arquivo).
+   ================================================================= */
+@media (max-width: 480px) {
+  /* ---- bloco 1 · MOBILE PROPORÇÕES FINAIS (ex-L2048) ---- */
+  /* container mais apertado em telas pequenas */
+  .container {
+    padding: 0 18px !important;
+  }
+
+  /* nav compacto */
+  .nav {
+    padding: 8px 0 !important;
+  }
+  .nav-logo img {
+    height: 30px !important;
+  }
+
+  /* hero: espaço vertical menor, igual ao print */
+  .hero {
+    padding: 76px 0 24px !important;
+  }
+
+  .hero-tag {
+    padding: 7px 12px !important;
+    font-size: 14px !important;
+    margin-bottom: 12px !important;
+    border-radius: 20px !important;
+  }
+
+  .hero h1 {
+    font-size: 26px !important;
+    line-height: 1.1 !important;
+  }
+
+  .hero-answer {
+    font-size: 26px !important;
+  }
+
+  .hero-sub {
+    font-size: 14px !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* badges checkmark (Sem custo / 100% online / 24h) */
+  .hero-badges {
+    gap: 8px !important;
+    margin-bottom: 12px !important;
+    flex-wrap: wrap !important;
+  }
+  .hero-badge {
+    font-size: 11px !important;
+    gap: 5px !important;
+  }
+  .hero-badge svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  /* stats 2×2 */
+  .hero-stats {
+    gap: 7px !important;
+  }
+  .hero-stat {
+    padding: 10px 8px !important;
+    min-height: 90px !important;
+    border-radius: 14px !important;
+  }
+  .hero-stat-num {
+    font-size: 22px !important;
+  }
+  .hero-stat-label {
+    font-size: 10px !important;
+  }
+
+  /* card de contexto (Plano pelo CNPJ...) */
+  .hero-card {
+    padding: 18px 16px !important;
+    border-radius: 14px !important;
+  }
+  .hero-card h3 {
+    font-size: 15px !important;
+  }
+  .hero-card p {
+    font-size: 13px !important;
+  }
+
+  /* ---- bloco 2 · refinamento .hero-badges (ex-L2284) ---- */
+  .hero-badges{gap:4px!important;}
+  .hero-badge{font-size:8px!important;padding:3px 7px!important;letter-spacing:.3px!important;text-transform:uppercase!important;}
+  .hero-badge svg{width:9px!important;height:9px!important;}
+
+  /* ---- bloco 3 · refinamento .cta-final .hero-badges (ex-L2295) ---- */
+  .cta-final .hero-badges{gap:3px!important;}
+  .cta-final .hero-badge{font-size:8px!important;padding:3px 7px!important;letter-spacing:0!important;}
+  .cta-final .hero-badge svg{width:8px!important;height:8px!important;}
+
+  /* ---- bloco 4 · .comparison-chart (ex-L2333) ---- */
+  .comparison-chart{padding:20px 14px!important;}
+
+  /* ---- bloco 5 · #quiz .calculator-btn-disabled (ex-L2880) ---- */
+  #quiz .calculator-btn-disabled,
+  #quiz .calculator-whatsapp-btn {
+    padding: 14px 18px !important;
+    font-size: 14px !important;
+    min-height: 48px !important;
+    border-radius: 12px !important;
+  }
+}
+
+
+/* =================================================================
+   CONSOLIDADO B.2b.etapa2 — breakpoint (min-width: 769px) · 4 blocos fundidos
+   Origem (linhas pré-consolidação, arquivo pós-Etapa 1):
+     bloco 1: L779-L783   .hero-line-main / .hero-line-secondary / .hero-answer
+     bloco 2: L2128-L2130 #quiz .calculator-option
+     bloco 3: L2134-L2136 #quiz .calculator-header h2
+     bloco 4: L2177-L2179 #quiz .calculator-reset-btn
+   Ordem interna: D3 (aparição original no arquivo).
+   Auditoria de movimento: Achado B (prompt v2) — todos os 4 blocos
+   validados como seguros para mover ao fim (ranges disjuntos vs max-width,
+   specificity #quiz prevalece, zero conflitos posteriores não cobertos).
+   ================================================================= */
+@media (min-width: 769px) {
+  /* ---- bloco 1 · hero-line-main/secondary/answer (ex-L779) ---- */
+  .hero-line-main{display:block;white-space:normal}
+  .hero-line-secondary{display:block;margin-top:6px}
+  .hero-answer{display:block;margin-top:18px;font-size:clamp(40px,5.8vw,62px);line-height:1.04}
+
+  /* ---- bloco 2 · #quiz .calculator-option (ex-L2128) ---- */
+  #quiz .calculator-option{font-size:13px!important;padding:12px 14px!important;border-radius:12px!important;font-weight:400!important;font-family:'Raleway',sans-serif!important;letter-spacing:.3px!important;}
+
+  /* ---- bloco 3 · #quiz .calculator-header h2 (ex-L2134) ---- */
+  #quiz .calculator-header h2{white-space:nowrap!important;}
+
+  /* ---- bloco 4 · #quiz .calculator-reset-btn (ex-L2177) ---- */
+  #quiz .calculator-reset-btn{font-size:12px!important;margin-top:12px!important;}
+}
+
+
+/* === C1 · Skip link · WCAG 2.4.1 Bypass Blocks (nível A) === */
+.skip-link{position:absolute;left:-10000px;top:0;padding:12px 20px;background:var(--gold,#C8902E);color:#0A1426;font-weight:700;text-decoration:none;z-index:10000;border-radius:0 0 8px 0}
+.skip-link:focus{left:0;outline:2px solid #fff;outline-offset:-4px}
+
+/* === C2 · Utility classes para acessibilidade === */
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+
+/* === C4 · Focus visível para navegação por teclado · WCAG 2.1 SC 1.4.11 (Non-text Contrast) + SC 2.4.7 (Focus Visible) === */
+/* Aparece apenas quando o foco chega via teclado (Tab/Shift+Tab). Usuários de mouse não veem. */
+/* Mantém :focus legado como fallback para browsers muito antigos, mas :focus-visible vence por ordem. */
+
+.form-input:focus-visible{outline:2px solid rgba(217,175,94,.90);outline-offset:2px;border-color:rgba(217,175,94,.60)}
+#quiz .form-input:focus-visible{outline:2px solid rgba(126,183,255,.90);outline-offset:2px;border-color:rgba(126,183,255,.60)}
+#quiz .calculator-money-input:focus-visible{outline:2px solid rgba(126,183,255,.90);outline-offset:4px;border-radius:4px}
+
+/* Botões (gold, WhatsApp, calculator options) */
+.btn:focus-visible,
+.nav-cta-sim:focus-visible,
+.nav-cta-wa:focus-visible,
+.calculator-option:focus-visible,
+.calculator-btn-disabled:focus-visible,
+.calculator-reset-btn:focus-visible,
+.calculator-whatsapp-btn:focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 6px rgba(0,0,0,.35)}
+
+/* Links (logo, social, footer, WhatsApp float, skip-link já tem o seu) */
+a:focus-visible{outline:2px solid rgba(217,175,94,.90);outline-offset:3px;border-radius:2px}
+
+/* FAQ <summary> usa details nativo — garante outline visível também */
+summary:focus-visible{outline:2px solid rgba(217,175,94,.90);outline-offset:2px}
+
+/* <main> recebe foco via skip link mas é estrutural — sem outline visual */
+main:focus,main:focus-visible{outline:none}
+
 /* === C3 · prefers-reduced-motion · WCAG 2.1 SC 2.3.3 (AAA) + SC 2.2.2 (A) === */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -2964,6 +3041,7 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
 <!-- ========== Aviso sem JavaScript (simulador nao funciona sem JS) ========== -->
 <noscript>
@@ -2982,15 +3060,18 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
   <div class="dolf-bg-layer dolf-bg-pattern"></div>
 </div>
 <!-- ===== NAVBAR ===== -->
+<header>
 <nav class="nav" id="navbar">
 <div class="container nav-inner">
 <a class="nav-logo" href="#"><img alt="Dolf Advogados" src="data:image/webp;base64,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"/></a>
 <div class="nav-ctas">
-<button class="nav-cta-sim" onclick="scrollToQuiz()">Faça uma simulação</button>
+<a class="nav-cta-sim" href="#quiz">Faça uma simulação</a>
 
 </div>
 </div>
 </nav>
+</header>
+<main id="main-content" tabindex="-1">
 <!-- ===== HERO ===== -->
 <section class="hero" id="hero">
 <div class="container">
@@ -3007,22 +3088,22 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
 <p class="hero-sub">Milhares de famílias pagam reajustes abusivos em planos contratados via CNPJ — muito acima do que a ANS autoriza. <strong>A Justiça já reconhece o direito à revisão e à devolução dos valores pagos a mais.</strong></p>
 <div class="hero-badges">
 <div class="hero-badge">
-<svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+<svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
             Sem custo inicial
           </div>
 <div class="hero-badge">
-<svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+<svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
             100% online
           </div>
 <div class="hero-badge">
-<svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+<svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
             Atendimento ágil
           </div>
 </div>
 <div class="hero-ctas">
 <button class="btn btn-primary btn-lg" onclick="scrollToQuiz()">Descubra se você tem direito à revisão</button>
-<a class="btn btn-whatsapp btn-lg" href="https://wa.me/5582999650100?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20de%20revis%C3%A3o%20de%20plano%20de%20sa%C3%BAde.%20Gostaria%20de%20tirar%20d%C3%BAvidas%20com%20um%20especialista." target="_blank">
-<svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.612l4.459-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.244 0-4.322-.724-6.012-1.95l-.42-.314-3.148 1.055 1.055-3.148-.314-.42A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path></svg>
+<a class="btn btn-whatsapp btn-lg" href="https://wa.me/5582999650100?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20de%20revis%C3%A3o%20de%20plano%20de%20sa%C3%BAde.%20Gostaria%20de%20tirar%20d%C3%BAvidas%20com%20um%20especialista." target="_blank" rel="noopener noreferrer">
+<svg fill="currentColor" height="20" viewBox="0 0 24 24" width="20" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.612l4.459-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.244 0-4.322-.724-6.012-1.95l-.42-.314-3.148 1.055 1.055-3.148-.314-.42A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path></svg>
             Ou fale direto no WhatsApp
           </a>
 </div>
@@ -3095,12 +3176,12 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
 <div class="rights-grid fade-up">
 <div class="right-card">
 <div class="right-icon" style="background:rgba(224,138,78,.1)">💰</div>
-<h4>Devolução de valores</h4>
+<h3>Devolução de valores</h3>
 <p>Tudo que foi pago acima do índice da ANS nos últimos anos pode ser restituído a você.</p>
 </div>
 <div class="right-card">
 <div class="right-icon" style="background:rgba(34,199,168,.1)">📉</div>
-<h4>Redução da mensalidade</h4>
+<h3>Redução da mensalidade</h3>
 <p>O valor do seu boleto pode ser reajustado para o patamar correto, conforme os índices da ANS.</p>
 </div>
 </div>
@@ -3115,13 +3196,13 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
       <p>Informe os dados do seu plano e veja a estimativa em segundos.</p>
     </div>
 
-    <div class="calculator-shell fade-up" id="calculatorShell">
-      <div class="calculator-stage active" id="calcStage1">
+    <div class="calculator-shell fade-up" id="calculatorShell" aria-live="polite" aria-atomic="false">
+      <div class="calculator-stage active" id="calcStage1" tabindex="-1">
         <div class="calculator-progress-top">
           <div class="calculator-step-counter">Passo 1 de 3</div>
           <div class="calculator-step-percent">33%</div>
         </div>
-        <div class="calculator-bar"><div class="calculator-bar-fill" style="width:33%"></div></div>
+        <div class="calculator-bar" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da simulação: passo 1 de 3"><div class="calculator-bar-fill" style="width:33%"></div></div>
 
         <div class="calculator-title">Qual é a operadora do plano?</div>
         <p class="calculator-subtitle">Cada operadora tem uma tabela histórica de reajustes específica.</p>
@@ -3138,12 +3219,12 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
         </div>
       </div>
 
-      <div class="calculator-stage" id="calcStage2">
+      <div class="calculator-stage" id="calcStage2" tabindex="-1">
         <div class="calculator-progress-top">
           <div class="calculator-step-counter">Passo 2 de 3</div>
           <div class="calculator-step-percent">67%</div>
         </div>
-        <div class="calculator-bar"><div class="calculator-bar-fill" style="width:67%"></div></div>
+        <div class="calculator-bar" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da simulação: passo 2 de 3"><div class="calculator-bar-fill" style="width:67%"></div></div>
 
         <div class="calculator-title">Quando o contrato foi assinado?</div>
         <p class="calculator-subtitle">A data de início define o período de análise dos reajustes.</p>
@@ -3178,38 +3259,39 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
         <div class="calculator-action-row">
           <button class="calculator-btn-disabled" id="calcContinueDate" disabled>Continuar</button>
         </div>
-        <button class="calculator-reset-btn" onclick="showStage('calcStage1')">Voltar</button>
+        <button class="calculator-reset-btn" onclick="showStage('calcStage1')" aria-label="Voltar ao passo 1: escolha da operadora">Voltar</button>
       </div>
 
-      <div class="calculator-stage" id="calcStage3">
+      <div class="calculator-stage" id="calcStage3" tabindex="-1">
         <div class="calculator-progress-top">
           <div class="calculator-step-counter">Passo 3 de 3</div>
           <div class="calculator-step-percent">100%</div>
         </div>
-        <div class="calculator-bar"><div class="calculator-bar-fill" style="width:100%"></div></div>
+        <div class="calculator-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da simulação: passo 3 de 3"><div class="calculator-bar-fill" style="width:100%"></div></div>
 
         <div class="calculator-title">Valor atual da fatura mensal</div>
         <p class="calculator-subtitle">Informe o total da fatura, incluindo todos os beneficiários.</p>
 
         <div class="calculator-money-wrap">
           <span class="calculator-money-prefix">R$</span>
-          <input class="calculator-money-input" id="calcMonthlyInput" placeholder="0,00" inputmode="decimal" />
+          <label class="visually-hidden" for="calcMonthlyInput">Valor mensal da fatura em reais</label>
+          <input class="calculator-money-input" id="calcMonthlyInput" placeholder="0,00" inputmode="decimal" aria-label="Valor mensal da fatura em reais" />
         </div>
 
         <div class="calculator-action-row">
           <button class="calculator-btn-disabled" id="calcCalculateBtn" disabled>Calcular agora</button>
         </div>
-        <button class="calculator-reset-btn" onclick="showStage('calcStage2')">Voltar</button>
+        <button class="calculator-reset-btn" onclick="showStage('calcStage2')" aria-label="Voltar ao passo 2: data do contrato">Voltar</button>
       </div>
 
-      <div class="calculator-stage" id="calcResult">
+      <div class="calculator-stage" id="calcResult" tabindex="-1">
         <div class="calculator-result-header">
-          <div class="calculator-success-icon">✓</div>
+          <div class="calculator-success-icon" aria-hidden="true">✓</div>
           <div class="calculator-result-title">Simulação concluída</div>
         </div>
 
         <div class="calculator-result-card soft">
-          <div class="calculator-result-icon blue">$</div>
+          <div class="calculator-result-icon blue" aria-hidden="true">$</div>
           <div class="calculator-result-content">
             <div class="calculator-result-label">Mensalidade justa estimada</div>
             <div class="calculator-result-value blue" id="calcFairValue">R$ 0,00</div>
@@ -3218,7 +3300,7 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
         </div>
 
         <div class="calculator-result-card green">
-          <div class="calculator-result-icon green">✎</div>
+          <div class="calculator-result-icon green" aria-hidden="true">✎</div>
           <div class="calculator-result-content">
             <div class="calculator-result-label">Restituição estimada (últimos 36 meses)</div>
             <div class="calculator-result-value green" id="calcRecoverValue">R$ 0,00</div>
@@ -3230,7 +3312,7 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
           <strong>* Valores estimados.</strong> Esta calculadora utiliza dados históricos de reajustes por operadora e índices da ANS. Os valores exatos dependem da análise documental. Esta simulação não constitui parecer jurídico definitivo.
         </div>
 
-        <a class="calculator-whatsapp-btn" href="#" id="calcWhatsappCta" target="_blank">Agendar análise gratuita no WhatsApp</a>
+        <a class="calculator-whatsapp-btn" href="#" id="calcWhatsappCta" target="_blank" rel="noopener noreferrer">Agendar análise gratuita no WhatsApp</a>
         <button class="calculator-reset-btn" onclick="restartCalculator()">Refazer simulação</button>
       </div>
     </div>
@@ -3311,25 +3393,25 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
 <div class="step-card upload-step" onclick="window.open('https://wa.me/5582999650100?text=Ol%C3%A1%2C%20j%C3%A1%20tenho%20os%20documentos%20do%20meu%20plano%20e%20gostaria%20de%20enviar%20agora%20para%20an%C3%A1lise.','_blank')">
 <div class="step-num">1</div>
 <div class="step-time">2 minutos</div>
-<h4>Envie seus dados</h4>
-<p>É rápido, gratuito e sem compromisso.</p><a class="step-action" href="https://wa.me/5582999650100?text=Ol%C3%A1%2C%20j%C3%A1%20tenho%20os%20documentos%20do%20meu%20plano%20e%20gostaria%20de%20enviar%20agora%20para%20an%C3%A1lise." target="_blank">Já tem os documentos? Clique aqui e envie agora pelo WhatsApp</a>
+<h3>Envie seus dados</h3>
+<p>É rápido, gratuito e sem compromisso.</p><a class="step-action" href="https://wa.me/5582999650100?text=Ol%C3%A1%2C%20j%C3%A1%20tenho%20os%20documentos%20do%20meu%20plano%20e%20gostaria%20de%20enviar%20agora%20para%20an%C3%A1lise." target="_blank" rel="noopener noreferrer">Já tem os documentos? Clique aqui e envie agora pelo WhatsApp</a>
 </div>
 <div class="step-card">
 <div class="step-num">2</div>
 <div class="step-time">Sem compromisso</div>
-<h4>Análise jurídica gratuita</h4>
+<h3>Análise jurídica gratuita</h3>
 <p>Nossa equipe avalia seu contrato, identifica irregularidades e confirma a viabilidade do caso.</p>
 </div>
 <div class="step-card">
 <div class="step-num">3</div>
 <div class="step-time">Honorários de êxito</div>
-<h4>Protocolo da ação</h4>
+<h3>Protocolo da ação</h3>
 <p>Identificadas irregularidades, iniciamos as medidas judiciais. Você não paga nada antecipado.</p>
 </div>
 <div class="step-card">
 <div class="step-num">4</div>
 <div class="step-time">100% online</div>
-<h4>Acompanhamento do caso</h4>
+<h3>Acompanhamento do caso</h3>
 <p>Acompanhe tudo digitalmente. Com resultado favorável, receba os valores e a redução da mensalidade.</p>
 </div>
 </div>
@@ -3396,8 +3478,8 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
 <h3>DOLF Advogados</h3>
 <p class="lawyer-team-text">Conheça nosso escritório</p>
 <div class="lawyer-social-links">
-  <a href="https://www.dolf.adv.br/" target="_blank" class="lawyer-social-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C4933F" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Visite nosso site</a>
-  <a href="https://www.instagram.com/dolfadvogados/" target="_blank" class="lawyer-social-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#E1306C" stroke="none"/></svg> Instagram</a>
+  <a href="https://www.dolf.adv.br/" target="_blank" class="lawyer-social-link" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C4933F" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Visite nosso site</a>
+  <a href="https://www.instagram.com/dolfadvogados/" target="_blank" class="lawyer-social-link" rel="noopener noreferrer"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E1306C" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="#E1306C" stroke="none"/></svg> Instagram</a>
 </div></div>
 </div>
 </div>
@@ -3412,25 +3494,26 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
 </div>
 <div class="cta-final-btns">
 <button class="btn btn-primary btn-lg" onclick="scrollToQuiz()">Faça agora sua simulação gratuita</button>
-<a class="btn btn-whatsapp btn-lg" href="https://wa.me/5582999650100?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20de%20revis%C3%A3o%20de%20plano%20de%20sa%C3%BAde.%20Gostaria%20de%20tirar%20d%C3%BAvidas%20com%20um%20especialista." target="_blank">
-<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.612l4.459-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.244 0-4.322-.724-6.012-1.95l-.42-.314-3.148 1.055 1.055-3.148-.314-.42A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path></svg> Falar agora com especialista</a>
+<a class="btn btn-whatsapp btn-lg" href="https://wa.me/5582999650100?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20de%20revis%C3%A3o%20de%20plano%20de%20sa%C3%BAde.%20Gostaria%20de%20tirar%20d%C3%BAvidas%20com%20um%20especialista." target="_blank" rel="noopener noreferrer">
+<svg fill="currentColor" height="16" viewBox="0 0 24 24" width="16" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.612l4.459-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.244 0-4.322-.724-6.012-1.95l-.42-.314-3.148 1.055 1.055-3.148-.314-.42A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path></svg> Falar agora com especialista</a>
 </div>
 <div class="hero-badges" style="margin-bottom:0!important;margin-top:24px!important;">
 <div class="hero-badge">
-<svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+<svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
             Atendimento humano
           </div>
 <div class="hero-badge">
-<svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+<svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
             Direito à saúde
           </div>
 <div class="hero-badge">
-<svg fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>
+<svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
             Só paga no êxito
           </div>
 </div>
 </div>
 </section>
+</main>
 <!-- ===== FOOTER ===== -->
 <footer class="dolf-footer">
 <div class="dolf-footer-inner">
@@ -3440,10 +3523,10 @@ footer{border-top:1px solid rgba(255,255,255,.05)!important;}
 </div>
 </footer>
 <!-- ===== WHATSAPP FLOAT ===== -->
-<a class="wa-float" href="https://wa.me/5582999650100?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20de%20revis%C3%A3o%20de%20plano%20de%20sa%C3%BAde.%20Gostaria%20de%20tirar%20d%C3%BAvidas%20com%20um%20especialista." target="_blank">
+<a class="wa-float" href="https://wa.me/5582999650100?text=Ol%C3%A1%2C%20vim%20pela%20p%C3%A1gina%20de%20revis%C3%A3o%20de%20plano%20de%20sa%C3%BAde.%20Gostaria%20de%20tirar%20d%C3%BAvidas%20com%20um%20especialista." target="_blank" rel="noopener noreferrer">
 <span class="wa-float-text">Fale com um especialista</span>
 <div class="wa-float-btn">
-<svg fill="currentColor" height="28" viewbox="0 0 24 24" width="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.612l4.459-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.244 0-4.322-.724-6.012-1.95l-.42-.314-3.148 1.055 1.055-3.148-.314-.42A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path></svg>
+<svg fill="currentColor" height="28" viewBox="0 0 24 24" width="28" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"></path><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.612l4.459-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.244 0-4.322-.724-6.012-1.95l-.42-.314-3.148 1.055 1.055-3.148-.314-.42A9.935 9.935 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path></svg>
 </div>
 </a>
 
@@ -3509,7 +3592,14 @@ const calcState = {
 function showStage(id) {
   document.querySelectorAll('#quiz .calculator-stage').forEach(el => el.classList.remove('active'));
   const target = document.getElementById(id);
-  if (target) target.classList.add('active');
+  if (target) {
+    target.classList.add('active');
+    // WCAG 2.4.3 · Focus move para novo stage + anúncio via aria-live do container
+    // Evita que foco fique "perdido" em elemento invisível após mudança de passo
+    setTimeout(() => {
+      try { target.focus({ preventScroll: true }); } catch (e) { target.focus(); }
+    }, 50);
+  }
 }
 
 function formatCurrencyBR(value) {
