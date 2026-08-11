@@ -798,7 +798,7 @@ html.js .fade-up.visible{opacity:1;transform:translateY(0)}
 #quiz .calculator-result-value.blue{color:rgba(255,255,255,.55);}
 #quiz .calculator-result-value.green{color:#14d3a3;}
 #quiz .calculator-result-note{font-size:15px;line-height:1.55;color:rgba(232,237,246,.40);}
-#quiz .calculator-disclaimer{margin:26px 0 24px;padding:26px 28px;border-radius:22px;background:rgba(255,255,255,.03);border:1px solid rgba(126,183,255,.12);color:rgba(232,237,246,.55);font-size:14px;line-height:1.9;}
+#quiz .calculator-disclaimer{margin:26px 0 24px;padding:26px 28px;border-radius:22px;background:rgba(255,255,255,.03);border:1px solid rgba(126,183,255,.12);color:rgba(232,237,246,.55);font-size:14px;line-height:1.9;text-align:justify;hyphens:auto;}
 #quiz .calculator-disclaimer strong{color:rgba(232,237,246,.76);}
 #quiz .calculator-whatsapp-btn{width:100%;display:flex;align-items:center;justify-content:center;text-align:center;min-height:88px;border-radius:22px;background:linear-gradient(135deg,#bc5b24,#d46f34);color:#fff;font-size:20px;font-weight:800;box-shadow:0 16px 38px rgba(212,111,52,.22);}
 #quiz .calculator-reset-btn{margin:18px auto 0;display:block;background:none;border:none;color:rgba(232,237,246,.42);text-decoration:underline;font-size:16px;cursor:pointer;}
@@ -3300,21 +3300,21 @@ main:focus,main:focus-visible{outline:none}
 </style>
 
 <style id="d3ConsentCss">
-.dolf-consent{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#0B1622;border-top:1px solid rgba(200,144,46,.45);box-shadow:0 -8px 30px rgba(0,0,0,.45);padding:18px 20px;font-family:inherit;color:#E8EDF6}
+.dolf-consent{position:fixed;left:0;right:0;bottom:0;z-index:9999;background-color:#EAE2D2;background-image:url('assets/paper.png'),linear-gradient(180deg,rgba(43,38,30,.075),rgba(43,38,30,0) 46%);border-top:1px solid rgba(19,24,32,.16);box-shadow:0 -10px 30px rgba(4,10,20,.25);padding:18px 20px;font-family:inherit;color:#1F2933}
 .dolf-consent-inner{max-width:960px;margin:0 auto}
-.dolf-consent h2{font-size:16px;font-weight:800;margin:0 0 6px;color:#fff}
-.dolf-consent p{font-size:13.5px;line-height:1.55;color:rgba(232,237,246,.82);margin:0 0 12px}
-.dolf-consent p a{color:#E8B850;text-decoration:underline}
+.dolf-consent h2{font-size:16px;font-weight:800;margin:0 0 6px;color:#131820}
+.dolf-consent p{font-size:13.5px;line-height:1.55;color:rgba(19,24,32,.78);margin:0 0 12px}
+.dolf-consent p a{color:#131820;text-decoration:underline}
 .dolf-consent-actions{display:flex;flex-wrap:wrap;gap:10px}
-.dolf-consent-btn{font-family:inherit;font-size:13.5px;font-weight:700;border-radius:10px;padding:10px 16px;cursor:pointer;border:1px solid rgba(232,237,246,.35);background:transparent;color:#E8EDF6}
-.dolf-consent-btn:focus-visible{outline:3px solid rgba(232,237,246,.85);outline-offset:2px}
-.dolf-consent-btn--primary{background:rgba(232,237,246,.10);border-color:rgba(232,237,246,.38);color:#E8EDF6;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-.dolf-consent-panel{margin:12px 0 0;border-top:1px solid rgba(255,255,255,.12);padding-top:12px}
+.dolf-consent-btn{font-family:inherit;font-size:13.5px;font-weight:700;border-radius:10px;padding:10px 16px;cursor:pointer;border:1px solid rgba(19,24,32,.45);background:transparent;color:#131820}
+.dolf-consent-btn:focus-visible{outline:3px solid rgba(19,24,32,.75);outline-offset:2px}
+.dolf-consent-btn--primary{background:#131820;border-color:#131820;color:#F7F3EC}
+.dolf-consent-panel{margin:12px 0 0;border-top:1px solid rgba(19,24,32,.14);padding-top:12px}
 .dolf-consent-panel[hidden]{display:none}
-.dolf-consent-cat{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;font-size:13px;color:rgba(232,237,246,.82)}
-.dolf-consent-cat input{margin-top:3px;width:16px;height:16px;accent-color:#C8902E}
-.dolf-consent-cat b{color:#fff}
-.dolf-consent-always{font-size:11px;font-weight:800;letter-spacing:.6px;color:#E8B850;border:1px solid rgba(232,184,80,.5);border-radius:8px;padding:1px 7px;margin-left:6px}
+.dolf-consent-cat{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;font-size:13px;color:rgba(19,24,32,.78)}
+.dolf-consent-cat input{margin-top:3px;width:16px;height:16px;accent-color:#131820}
+.dolf-consent-cat b{color:#131820}
+.dolf-consent-always{font-size:11px;font-weight:800;letter-spacing:.6px;color:#131820;border:1px solid rgba(19,24,32,.4);border-radius:8px;padding:1px 7px;margin-left:6px}
 @media (max-width:600px){.dolf-consent{padding:14px 14px calc(14px + env(safe-area-inset-bottom))}.dolf-consent-actions{flex-direction:column}.dolf-consent-btn{width:100%}}
 </style>
 <!-- D.3 · Consent Mode v2: tudo negado por padrão; escolha do usuário atualiza; GTM inerte até a troca do ID -->
@@ -3334,7 +3334,7 @@ var DOLF_GTM_ID='GTM-XXXXXXX'; /* trocar pelo ID real do contêiner (Bernardo) �
 @font-face{font-family:'Raleway';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/raleway-800.woff2') format('woff2')}
 @font-face{font-family:'Raleway';font-style:normal;font-weight:900;font-display:swap;src:url('assets/fonts/raleway-900.woff2') format('woff2')}
 </style>
-<style id="consent-note-css">.calc-consent-note{font-size:12.5px;line-height:1.5;color:rgba(232,237,246,.78);background:rgba(232,237,246,.06);border:1px solid rgba(232,237,246,.22);border-radius:8px;padding:9px 12px;margin:14px 0 10px;text-align:center}</style>
+<style id="fix-mobile-center">@media (max-width:768px){.lawyer-info{text-align:center}.lawyer-info h3,.lawyer-info .lawyer-team-text{text-align:center}.lawyer-info .lawyer-about-text{text-align:justify}.lawyer-social-links{display:flex;flex-wrap:wrap;justify-content:center}}</style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
@@ -3607,7 +3607,7 @@ var DOLF_GTM_ID='GTM-XXXXXXX'; /* trocar pelo ID real do contêiner (Bernardo) �
           <strong>* Valores estimados.</strong> Estimativa matemática baseada nos dados informados, no cenário de acolhimento integral do pedido. Não constitui promessa de resultado: o valor de cada caso depende de análise individual e de decisão judicial. Esta calculadora utiliza dados históricos de reajustes por operadora e índices da ANS. Os valores exatos dependem da análise documental. Esta simulação não constitui parecer jurídico definitivo. Ciclos sem índice de agrupamento divulgado são estimados a partir dos índices oficiais da ANS e da relação histórica documentada de cada operadora, conforme descrito nos Termos de Uso.
         </div>
 
-        <p class="calc-consent-note">Ao tocar no botão abaixo, você concorda em enviar à DOLF Advogados, pelo WhatsApp, o resumo da sua simulação (operadora, data do contrato e valores estimados).</p>
+        <div class="calculator-disclaimer calc-consent-note">Ao tocar no botão abaixo, você concorda em enviar ao DOLF Advogados, pelo WhatsApp, o resumo da sua simulação (operadora, data do contrato e valores estimados).</div>
 <a class="calculator-whatsapp-btn" href="#" id="calcWhatsappCta" target="_blank" rel="noopener noreferrer">Falar com um advogado pelo WhatsApp</a>
         <button class="calculator-reset-btn" onclick="restartCalculator()">Refazer simulação</button>
       </div>
@@ -3730,7 +3730,7 @@ var DOLF_GTM_ID='GTM-XXXXXXX'; /* trocar pelo ID real do contêiner (Bernardo) �
 <div class="lawyer-info">
 <h3>DOLF Advogados</h3>
 <p class="lawyer-team-text">Conheça nosso escritório</p>
-<p class="lawyer-about-text">A DOLF Advogados é escritório inscrito na OAB/AL sob o nº 49.116, com sede em Maceió e atendimento online para todo o Brasil. Nossa atuação concentra-se em saúde suplementar, com ênfase em contratos de plano de saúde coletivos empresariais e por adesão.</p>
+<p class="lawyer-about-text">O DOLF Advogados é escritório inscrito na OAB/AL sob o nº 49.116, com sede em Maceió e atendimento online para todo o Brasil. Nossa atuação concentra-se em saúde suplementar, com ênfase em contratos de plano de saúde coletivos empresariais e por adesão.</p>
 <p class="lawyer-about-text">Analisamos individualmente cada caso para avaliar a viabilidade jurídica de eventual revisão contratual. O enquadramento de um contrato coletivo atípico no regime dos planos individuais (orientação consolidada das Turmas de Direito Privado do STJ) depende das características concretas do contrato, do número de vidas, da composição dos beneficiários e do histórico de reajustes.</p>
 <p class="lawyer-about-text">Não há garantia de resultado em demandas dessa natureza. O acompanhamento é feito em comunicação continuada com o cliente, da análise inicial ao encerramento do caso.</p>
 <div class="lawyer-social-links">
@@ -4049,7 +4049,7 @@ function calculateNow() {
   const msg =
     'Olá! Fiz a simulação no site e gostaria de falar com um advogado.%0A%0A' +
     '*Operadora:* ' + encodeURIComponent(calcState.operator) + '%0A' +
-    '*Data do contrato:* ' + encodeURIComponent(String(calcState.month).padStart(2,'0') + '/' + calcState.year) + '%0A' +
+    '*Data do contrato:* ' + encodeURIComponent(String(calcState.month).padStart(2,'0') + '/' + calcState.year + ' (' + (((new Date().getFullYear() - calcState.year) * 12) + (new Date().getMonth() + 1 - calcState.month)) + ' meses)') + '%0A' +
     '*Valor atual da fatura:* ' + encodeURIComponent(formatCurrencyBR(calcState.monthlyValue)) + '%0A' +
     '*Mensalidade justa estimada:* ' + encodeURIComponent(formatCurrencyBR(result.valorJustoAtual)) + '%0A' +
     '*Restituição estimada (36 meses):* ' + encodeURIComponent(formatCurrencyBR(result.totalRestituicao));
